@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dear Reader — A Letter from Shreya</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f2e7;
+      font-family: 'Crimson Text', serif;
+      color: #4a2c2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .letter-container {
+      max-width: 800px;
+      background: #fffaf5;
+      padding: 50px;
+      border: 1px solid #e4cbb2;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      position: relative;
+      text-align: left;
+    }
+
+    .letter-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 6px;
+      width: 100px;
+      background: #d4a373;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      font-size: 48px;
+      color: #b05a3c;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-size: 20px;
+      text-align: right;
+    }
+
+    .next-button {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #d0896c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .next-button:hover {
+      background-color: #b56c52;
+    }
+
+    @media (max-width: 600px) {
+      .letter-container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p, .signature {
+        font-size: 18px;
+      }
+
+      .next-button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="letter-container">
+    <h1>Dear Reader,</h1>
+    <p>
+This story isn’t just made-up lines and characters —  
+it’s a heartbeat stitched with memories, firsts, and feelings we never really forget.  
+Some pages were written with giggles,  
+some with tears,  
+but all with love.  
+
+Aavni and Darshan may be fictional,  
+but if you’ve ever had a childhood bond, a quiet crush,  
+or someone who felt like home long before love had a name —  
+then you’ve already met them in your own way.  
+
+Maybe it’s not perfect.  
+But it’s real.  
+And that’s what makes it beautiful.  
+
+Thank you for holding a piece of my heart in your hands.  
+If even one line made you smile, pause, or remember someone —  
+then this story did its job.
+    </p>
+
+    <div class="signature">
+      With all my love,<br>
+      Shreya 💛
+    </div>
+
+    <div style="text-align: center;">
+      <a href="intro.html" class="next-button">Next Page ➡️</a>
+    </div>
+  </div>
+</body>
+</html>

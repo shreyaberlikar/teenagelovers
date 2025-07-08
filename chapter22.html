@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 22 – E-book Format</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f5f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .ebook-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    }
+    .chapter-title {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #1a3c40;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .quote {
+      font-style: italic;
+      color: #555;
+      text-align: center;
+      margin-bottom: 25px;
+      padding: 10px 20px;
+      border-left: 4px solid #7ab2b2;
+      background: #eaf6f6;
+      border-radius: 6px;
+    }
+    .chat-box {
+      background: #ece5dd;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+    .chat-message {
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      max-width: 80%;
+      font-size: 15px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .sender {
+      background: #dcf8c6;
+      align-self: flex-start;
+    }
+    .receiver {
+      background: #f0f0f0;
+      align-self: flex-end;
+      margin-left: auto;
+      text-align: right;
+    }
+    .name {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .emoji {
+      font-size: 1.2em;
+    }
+    .seen {
+      font-size: 0.8em;
+      color: #999;
+    }
+    .reaction-box {
+      background: #fff3cd;
+      color: #856404;
+      padding: 12px 16px;
+      border-left: 4px solid #ffc107;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .chapter-end {
+      text-align: center;
+      font-size: 1.4em;
+      color: #e87ea1;
+      margin-top: 30px;
+    }
+    .navigation-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .nav-btn {
+      background: #7ab2b2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .nav-btn:hover {
+      background: #5a9999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="ebook-container">
+  <h2 class="chapter-title">Chapter 22:<br>Words That Hit Deeper Than Intended</h2>
+
+  <p class="quote">"Some truths come wrapped in jokes; still, they cut the deepest."</p>
+
+  <div class="chat-box">
+    <div class="chat-message sender">
+      <span class="name">Aavni:</span>
+      "If someone wants to cheat, they will.<br>
+      Phone checking isn’t gonna stop that."
+    </div>
+
+    <div class="chat-message receiver">
+      <span class="name">Darshan:</span>
+      "Matlab?"
+    </div>
+
+    <div class="chat-message sender">
+      <span class="name">Aavni:</span>
+      "I mean... I don’t check your phone. I don’t need to."<br>
+      <span class="emoji">😅</span>
+    </div>
+
+    <div class="chat-message receiver">
+      <span class="name">Darshan:</span>
+      "Hmm."<br><span class="seen">(Seen)</span>
+    </div>
+  </div>
+
+  <div class="reaction-box">
+    <h4>His Reaction:</h4>
+    <p>
+      He read the texts twice. Smiled. But not the good kind.<br>
+      A quiet storm stirred inside him — because sometimes, even the smallest taunts carry the loudest truths.
+    </p>
+  </div>
+
+  <p class="chapter-end">💌💌💌</p>
+
+ <div class="navigation-buttons">
+  <a class="nav-btn" href="chapter21.html">⟵ Prev</a>
+  <a class="nav-btn" href="chapter23.html">Next ⟶</a>
+</div>
+
+
+<script>
+  function goToChapter(chapterNum) {
+    alert('Navigate to Chapter ' + chapterNum);
+    // You can replace this alert with actual navigation logic (like window.location.href)
+  }
+</script>
+
+</body>
+</html>

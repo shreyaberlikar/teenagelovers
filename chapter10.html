@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 10 – Secrets & Sass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #fbeaff, #fff1f5);
+      color: #333;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/flowers.png');
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: auto;
+      padding: 60px 25px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #d94f9f;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 6px #ffc1e8;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #a03c82;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      border-bottom: 2px dashed #f9c6de;
+      padding-bottom: 4px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+      animation-delay: var(--delay);
+    }
+
+    .highlight {
+      color: #ff3399;
+      font-weight: bold;
+      background: #fff0f7;
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #a44c7f;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    p:nth-of-type(1) { --delay: 0.3s; }
+    p:nth-of-type(2) { --delay: 0.6s; }
+    p:nth-of-type(3) { --delay: 0.9s; }
+    p:nth-of-type(4) { --delay: 1.2s; }
+    p:nth-of-type(5) { --delay: 1.5s; }
+    p:nth-of-type(6) { --delay: 1.8s; }
+    p:nth-of-type(7) { --delay: 2.1s; }
+    p:nth-of-type(8) { --delay: 2.4s; }
+    p:nth-of-type(9) { --delay: 2.7s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer-note {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 15px;
+      color: #888;
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .nav-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 24px;
+      background: #f9c6de;
+      color: #6d2945;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(217, 79, 159, 0.2);
+      transition: all 0.3s ease;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .nav-buttons a:hover {
+      background: #ffe1f0;
+      color: #000;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 28px; }
+      p { font-size: 16px; }
+      .nav-buttons a { padding: 10px 18px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter 10: Secrets & Sass</h1>
+
+    <section>
+      <h2>Late Night Gossip 🌙</h2>
+      <p>It was past 9 p.m., and Aavni had just finished cleaning up the cups and folding the blanket from the bed. Her room still smelled like him — <span class="highlight">warm chai and citrusy perfume</span>.</p>
+      <p>She was barely back in her pajamas when her phone rang.</p>
+      <p><span class="highlight">Incoming Call: Tani 💅</span></p>
+      <p>“ARE YOU ALIVE?” Tani screamed the moment Aavni picked up.</p>
+      <p>Aavni giggled, “I am… barely.”</p>
+      <p>“Omg bitch tell me everything! Did he show up with flowers? Did he kiss you before entering? Or did y’all jump right into—”</p>
+      <p>“Can you stop narrating like a Wattpad scene?” Aavni laughed. “He just came in. Sat on the sofa like a good boy.”</p>
+      <p>Tani gasped. “So no kiss? No hug? Just water and namaste?”</p>
+      <p>Aavni smirked. “Well… I did shut the door and lock the gate.”</p>
+      <p>“Oh-hooooo, <span class="highlight">shubh shubh bol na!</span>”</p>
+      <p>They both burst into laughter.</p>
+    </section>
+
+    <section>
+      <h2>Spilled Tea, Literally 🍵</h2>
+      <p>“So what happened?” Tani asked, dropping her voice like a gossip aunty.</p>
+      <p>“Did he… y'know… take a sip of chai or sip from you first?”</p>
+      <p>Aavni grabbed her pillow and squealed into it.</p>
+      <p>“Taniii, stop!”</p>
+      <p>“Nope, I’m not stopping. You told me to teach you how to kiss using your fingers — <span class="highlight">upper lip, lower lip, breath in-out...</span> don’t waste my tutorial now!”</p>
+      <p>Aavni laughed so hard she nearly dropped her phone.</p>
+      <p>“Okay fine,” she confessed. “<span class="highlight">I used it.</span>”</p>
+      <p>Tani gasped like a proud mother. “Andddd?”</p>
+      <p>Aavni whispered, “<span class="highlight">He was shook.</span>”</p>
+      <p>They both screamed in sync.</p>
+    </section>
+
+    <section>
+      <h2>The Flashbacks 🫶</h2>
+      <p>“I swear,” Aavni began, lying back on her bed, “When I opened the door, he looked nervous but <span class="highlight">so damn cute</span>. And when I kissed him... he froze. Then pulled me so close I forgot how to breathe.”</p>
+      <p>Tani’s voice softened, “Girl… your first real kiss at your place… with nobody home. <span class="highlight">That’s some movie sh*t.</span>”</p>
+      <p>“I know,” Aavni said, suddenly quiet. “It felt… perfect. Not rushed. Not awkward. Just us.”</p>
+      <p>Tani smiled through the phone. “That’s love, idiot. Told you na — one day he’ll kiss you and all your drama will melt.”</p>
+      <p>Aavni grinned. “And you’ll forever be the girl who taught me kissing with my fingers.”</p>
+      <p>“<span class="highlight">Put that in your wedding speech!</span>” Tani howled.</p>
+    </section>
+
+    <section>
+      <h2>🌙 The Last Message</h2>
+      <p>Before hanging up, Tani asked, “So what’s next? When’s Round 2?”</p>
+      <p>Aavni giggled. “Maybe next week. But you’re dropping me off again if he comes.”</p>
+      <p>Tani winked through the phone, “As long as you promise to tell me every damn detail.”</p>
+      <p>“<span class="highlight">Promise. Upper lip, lower lip and all.</span>”</p>
+
+      <p class="quote">“Behind every girl in love… is a bestie who taught her how to kiss with her own hand.”<br>(ehehehe)</p>
+    </section>
+
+    <div class="footer-note">
+      ✨ Swipe for Chapter 11 when ready... or re-read for the giggles.
+    </div>
+
+    <div class="nav-buttons">
+      <a href="chapter9.html">← Previous</a>
+      <a href="chapter11.html">Next →</a>
+    </div>
+  </div>
+</body>
+</html>

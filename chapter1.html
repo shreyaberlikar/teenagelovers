@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1 – Wings in the Air!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(145deg, #fdf6f0, #ffe4ec);
+      min-height: 100vh;
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    .floating-bubbles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 204, 229, 0.3);
+      border-radius: 50%;
+      animation: float 20s linear infinite;
+    }
+
+    .bubble:nth-child(1) { left: 10%; width: 30px; height: 30px; animation-delay: 0s; }
+    .bubble:nth-child(2) { left: 25%; width: 40px; height: 40px; animation-delay: 2s; }
+    .bubble:nth-child(3) { left: 50%; width: 20px; height: 20px; animation-delay: 4s; }
+    .bubble:nth-child(4) { left: 70%; width: 35px; height: 35px; animation-delay: 1s; }
+    .bubble:nth-child(5) { left: 85%; width: 25px; height: 25px; animation-delay: 3s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.5; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 20px;
+      background-color: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #ff4f81;
+      font-size: 36px;
+      margin-bottom: 10px;
+      animation: fadeIn 1.4s ease;
+    }
+
+    .date {
+      text-align: center;
+      color: #999;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      text-align: justify;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+      animation-delay: var(--delay);
+    }
+
+    p:nth-of-type(1) { --delay: 0.4s; }
+    p:nth-of-type(2) { --delay: 0.8s; }
+    p:nth-of-type(3) { --delay: 1.2s; }
+    p:nth-of-type(4) { --delay: 1.6s; }
+    p:nth-of-type(5) { --delay: 2s; }
+    p:nth-of-type(6) { --delay: 2.4s; }
+    p:nth-of-type(7) { --delay: 2.8s; }
+    p:nth-of-type(8) { --delay: 3.2s; }
+    p:nth-of-type(9) { --delay: 3.6s; }
+    p:nth-of-type(10) { --delay: 4s; }
+
+    .highlight {
+      background: #ffeef5;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .romantic {
+      color: #c15178;
+      font-style: italic;
+      text-shadow: 0 0 6px #f3c1d7;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .next-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #ff6f91;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .next-button:hover {
+      background-color: #ff4f81;
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <div class="container">
+    <h1>Chapter 1: Wings in the Air!</h1>
+    <div class="date">Date: 09/10/2024</div>
+
+    <p><span class="highlight">"May your coffee kick in before reality does!"</span> …read the playful quote scribbled on the side of the coffee mug, handed to Aavni by the McDonald's waiter. She couldn't help but smile — the kind of lighthearted humor that perfectly fit this moment.</p>
+
+    <p>Aavni glanced across the table at Darshan, taking in his effortless charm — a pistagreen shirt that made his eyes shine, a sharp nose, perfect eyebrows, and those irresistible lips curled into a mischievous smile. Her heart fluttered.</p>
+
+    <p>Dressed in her favourite yellow shirt and jeans, her hair pulled back in a half-ponytail, she felt a little more vibrant sitting across from him.</p>
+
+    <p>A waiter approached. Aavni exchanged a look with Darshan — they both realized they were supposed to order downstairs.</p>
+
+    <p><span class="highlight">"I'll be back, right?"</span> Darshan chuckled nervously and headed off. A few minutes later, he returned, proud but slightly puzzled. Aavni smiled, savoring the moment.</p>
+
+    <p>The waiter returned again, this time with just coffee. Confused, they looked at each other — clueless.</p>
+
+    <p><span class="highlight">"The combo set of coffee & burger,"</span> he said. Then added innocently, <span class="highlight">"Idk, mala nahi mahiti, jevdha dila tevdha khau, rahile tr rahu det!"</span></p>
+
+    <p>Aavni burst out laughing, her eyes crinkling at his adorable expression — a mix of pride and confusion. Their glances spoke a thousand words.</p>
+
+    <p>When the burger finally arrived, he pulled her chair gently. <span class="highlight">“Sit here,”</span> he said, a playful smile forming.</p>
+
+    <p>She moved beside him. They giggled, shared bites, clicked selfies, and filmed little videos. <span class="romantic">Each moment felt like a memory blooming in soft pink.</span></p>
+
+    <p>Between bites, stories, and laughter, she glanced again at the quote: <span class="highlight">"May your coffee kick in before reality does!"</span> How fitting it felt — this day felt <span class="romantic">whimsical, unreal, perfect.</span></p>
+
+    <p>As they wrapped up, laughter still lingering, Aavni smiled and suggested their next plan — a nearby garden stroll. The date had just begun. But it already felt unforgettable.</p>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="intro.html" class="next-button" style="margin-right: 15px;">⬅️ Previous</a>
+      <a href="chapter2.html" class="next-button">Next Page ➡️</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 4 – Backseat Stars & Bus Stop Sass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to top right, #fdf6f0, #e3e4fa);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 4s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 25px;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #5d3f6a;
+      font-size: 38px;
+      margin-bottom: 30px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease;
+      text-align: justify;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-buttons a {
+      padding: 12px 24px;
+      background-color: #7a5c90;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #5c3f70;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .highlight {
+      background: #ffe6f0;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    .sass {
+      color: #c0396f;
+      font-weight: 600;
+    }
+
+    .romantic {
+      text-shadow: 0 0 5px #e37aa2;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <div class="container">
+    <h1>Chapter 4: Backseat Stars & Bus Stop Sass</h1>
+
+    <p><strong>📅 16th December</strong> — and Aavni had just survived the last battle of her semester — the <span class="highlight">OOPCG practical</span>. And oh, what a ride that was.</p>
+
+    <p>Originally, she'd been given CG practical — the kind of subject that could emotionally damage even toppers. But thanks to a little convincing (<span class="sass">okay, more like lowkey begging</span>), she got herself swapped into OOPCG.</p>
+
+    <p><span class="highlight">“Baba, ekdum zero errors run kela me! Compiler pan emotional zhala asel!”</span></p>
+
+    <p><span class="highlight">“You didn’t just convince sir… you emotionally manipulated the system.”</span></p>
+
+    <p><span class="highlight">“Arrey when survival is at stake, you gotta use the ‘girl charm’ + ‘code tears’ combo!”</span> Aavni smirked.</p>
+
+    <p>Once she exited the lab, grinning like she'd won a trophy, she dialed the usual suspects — Aai-Baba, and Darshan. <span class="highlight">“Guess who’s the next OOPCG queen?”</span></p>
+
+    <p>“Not me,” Darshan deadpanned. <span class="highlight">“Exactly,”</span> she winked through the phone.</p>
+
+    <hr>
+
+    <p>By 1 PM, she was back at the PG. Packing was chaos: Half-open zippers, overfed bags, one missing sock, and three emotional breakdowns later, she was done. Ate. Showered. Got ready. And waited.</p>
+
+    <p class="sass">“I swear, this bus has the same punctuality as my ex’s promises,”</p>
+
+    <p class="sass">“At least the bus shows up eventually.”</p>
+
+    <p>At 5:59 sharp, they were on board. Bags above, headphones in, tea bottle ready.</p>
+
+    <p><strong>The journey home?</strong> <span class="sass">ICONIC.</span> They gossiped like school never ended —</p>
+
+    <ul>
+      <li><span class="highlight">“Remember that guy who thought he was Shah Rukh in 9th?”</span></li>
+      <li><span class="highlight">“His notes had more love poems than actual answers.”</span></li>
+      <li><span class="highlight">“Her villain arc started after PT teacher called her bhendi!”</span></li>
+    </ul>
+
+    <p class="highlight">“You’re a Pisces. Which means emotional AF.”</p>
+    <p class="highlight">“Excuse me, I’m a Pisces sun and savage moon.”</p>
+
+    <hr>
+
+    <p><strong>📅 1 AM</strong> — her dad came to pick her up. Darshan had teased: <span class="highlight">“Should I come pick you up with roses and Shahrukh arms?”</span></p>
+
+    <p><span class="sass">“Naah, my baba &gt; Bollywood hero.”</span> But her cheeks were warm.</p>
+
+    <hr>
+
+    <p>That evening: cool wind, dreamy sky, <strong>Darshan’s car.</strong></p>
+
+    <p><span class="highlight">“I need a long drive, you, and emotional support.”</span></p>
+
+    <p><span class="highlight">“You’ll get two out of three.”</span></p>
+
+    <p><span class="highlight">“Warning: I may cry, laugh, and confess a random crush from 8th grade tonight.”</span></p>
+
+    <p><span class="highlight">“If it’s not me, I’m dropping you home.”</span></p>
+
+    <p><span class="sass">“You were always the crush. But that mushroom cut…”</span></p>
+    <p>Darshan: “That was a trend!”</p>
+    <p class="sass">“Not in this galaxy.”</p>
+
+    <hr>
+
+    <p class="romantic">They cuddled, whispered, kissed under stars. 🩷</p>
+
+    <p><span class="highlight">“We need a podcast.”</span><br>
+    <span class="highlight">“2 idiots in love – Season 1.”</span></p>
+
+    <p><span class="highlight">“Pull over,” she teased.</span><br>
+    <span class="highlight">“You gonna confess again?”</span><br>
+    <span class="sass">“Nope. Just wanted to see you panic.”</span></p>
+
+    <p class="romantic">In between laughs, playlists, winter wind and glances — they fell in love a little harder. ❤️</p>
+
+    <p style="text-align:center; font-size: 24px;">💌💌💌</p>
+
+    <div class="nav-buttons">
+      <a href="chapter3.html">⬅ Previous</a>
+      <a href="chapter5.html">Next ➡</a>
+    </div>
+  </div>
+
+  <script>
+    const starBox = document.getElementById("stars");
+    for (let i = 0; i < 70; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      starBox.appendChild(star);
+    }
+  </script>
+</body>
+</html>

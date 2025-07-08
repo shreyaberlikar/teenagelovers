@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 15 – The Weight of Small Things</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f4e5e9, #eae2f0);
+      color: #443939;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      opacity: 0.07;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: auto;
+      padding: 60px 30px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: #865e6d;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 5px rgba(130, 90, 100, 0.2);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+      animation-delay: var(--delay, 0.3s);
+    }
+
+    p:nth-of-type(1) { --delay: 0.3s; }
+    p:nth-of-type(2) { --delay: 0.6s; }
+    p:nth-of-type(3) { --delay: 0.9s; }
+    p:nth-of-type(4) { --delay: 1.2s; }
+    p:nth-of-type(5) { --delay: 1.5s; }
+    p:nth-of-type(6) { --delay: 1.8s; }
+    p:nth-of-type(7) { --delay: 2.1s; }
+    p:nth-of-type(8) { --delay: 2.4s; }
+    p:nth-of-type(9) { --delay: 2.7s; }
+    p:nth-of-type(10) { --delay: 3.0s; }
+    p:nth-of-type(11) { --delay: 3.3s; }
+    p:nth-of-type(12) { --delay: 3.6s; }
+
+    .highlight {
+      background: #fbe7f0;
+      padding: 2px 6px;
+      border-radius: 5px;
+      color: #a84867;
+      font-weight: 600;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #714b5a;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 40px;
+      border-top: 1px dashed #ccc;
+      padding-top: 20px;
+    }
+
+    .footer-note {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .nav-buttons a {
+      display: inline-block;
+      margin: 0 12px;
+      padding: 10px 22px;
+      background: #a76a7f;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      border-radius: 30px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-buttons a:hover {
+      background: #8d566a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 24px; }
+      p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter 15: The Weight of Small Things</h1>
+
+    <p>Midnight came quietly.</p>
+    <p>No fireworks. No loud knocks. Just silence. Aavni sat at the edge of her bed, the soft blue glow of her phone screen casting shadows across her face.</p>
+    <p>She remembered last year. The moment the clock struck twelve, <span class="highlight">Darshan’s name had lit up her screen like a firework</span>.</p>
+    <p>A voice note followed — goofy, warm, filled with love and awkward rhymes only he could come up with. “<span class="highlight">Happy birthday, sunshine. My one and only, forever.</span>”</p>
+    <p>He had made her feel like the day was meant just for her.</p>
+    <p>But this year... nothing.</p>
+    <p>She kept checking her phone. A ghost notification. A false vibration. A trick of the mind. She refreshed the chat. Still nothing. <span class="highlight">Not even a "Happy Birthday" sticker.</span></p>
+    <p>Her fingers hovered over the keyboard, tempted to text him first. But something inside her said — no. Not this time.</p>
+    
+    <p>— — —</p>
+
+    <p>The next morning, the world didn’t pause for her heartbreak.</p>
+    <p>Friends wished her with cake, laughter, and hugs. Her classmates filled her bench with chocolates and notes. Her inbox was full of “HBD Aavni!!”</p>
+    <p>But her heart kept looking for one name. One message.</p>
+    <p>12 PM. 1 PM. 2 PM.</p>
+    <p>And then finally — <span class="highlight">Darshan: “Hey. Happy birthday.”</span></p>
+    <p>That’s it. No call. No voice note. No emoji. Just... text. Plain and late.</p>
+    <p>Her stomach dropped.</p>
+    <p>It wasn’t about gifts. It never was. All she wanted was a little time. A little effort. A voice. A memory. A sign that she still mattered.</p>
+    <p>She didn’t reply.</p>
+    <p>Then—</p>
+    <p><span class="highlight">Darshan: “Can we meet today?”</span></p>
+    <p>She stared at the screen. Typed. Deleted. Typed again.</p>
+    <p><span class="highlight">Aavni: “No. I’m heading home.”</span></p>
+
+    <p>— — —</p>
+
+    <p>That evening, her cake half-eaten, candles long blown out, <span class="highlight">tears traced down silently</span>.</p>
+    <p>It wasn’t the absence of a party. It was the absence of effort.</p>
+    <p><span class="highlight">She wasn’t asking for the world. Just a little corner in his.</span></p>
+
+    <p class="quote">“It’s not the grand gestures.<br>
+    It’s the forgotten ones that break your heart the most.”</p>
+
+    <div class="footer-note">💌 Chapter 16 coming soon… but maybe this one will stay with you a while.</div>
+
+    <div class="nav-buttons">
+      <a href="chapter14.html">← Previous</a>
+      <a href="chapter16.html">Next →</a>
+    </div>
+  </div>
+</body>
+</html>

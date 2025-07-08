@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teenage Lovers</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff8f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #3b2f2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.3rem;
+      color: #ff4d6d;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #7b4a4a;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-box {
+      background: #ffe2e9;
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 175, 199, 0.4);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #443131;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: #ffb3c1;
+      color: #3b2f2f;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #ffa1af;
+    }
+
+    .petal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: fall 10s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Teenage Lovers</h1>
+    <h2>a story that feels like your first heartbreak & your favorite song</h2>
+    
+    <div class="quote-box">
+      If you’re reading this… <br>
+      I love you moreee..<br><br>
+      Love love,<br>
+      <strong>Shreya 💛</strong>
+    </div>
+
+    <a href="secondpage.html" class="button">Start Reading 💌</a>
+  </div>
+
+  <!-- Falling petals effect -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let petal = document.createElement("div");
+      petal.className = "petal";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = 5 + Math.random() * 5 + "s";
+      document.body.appendChild(petal);
+    }
+  </script>
+</body>
+</html>

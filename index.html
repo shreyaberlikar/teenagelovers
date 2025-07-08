@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teenage Lovers – Welcome</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fff1f4, #ffe3e3);
+      font-family: 'Quicksand', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-family: 'Great Vibes', cursive;
+      color: #d14b8f;
+      margin-bottom: 20px;
+      animation: slideInDown 1.2s ease-out;
+    }
+
+    .desc {
+      max-width: 700px;
+      font-size: 1.2rem;
+      color: #4d2c3d;
+      line-height: 1.9;
+      animation: slideInUp 1.6s ease-out;
+    }
+
+    .author {
+      margin-top: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #6e2142;
+      animation: fadeIn 3s ease-out;
+    }
+
+    .buttons {
+      margin-top: 50px;
+      display: flex;
+      gap: 20px;
+      animation: fadeIn 2.5s ease-out;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background: #ff90b3;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background: #e86696;
+      transform: translateY(-4px);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideInDown {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Teenage Lovers</h1>
+    <div class="desc">
+      <p>Welcome to <strong>Teenage Lovers</strong> — a soft, messy, nostalgic rollercoaster through the world of young hearts.
+      This e-book is filled with <em>love that blooms too fast</em>, <em>fights that hurt too deep</em>, and the kind of moments that stick long after they’re gone.
+      </p>
+      <p>
+        It’s not a fairytale. It’s not perfect. But it’s real. If you've ever loved someone like the world would end tomorrow, this story is yours.
+      </p>
+    </div>
+    <div class="author">
+      Written with all my heart — <br> <strong>Shreya Berlikar ♡</strong>
+    </div>
+    <div class="buttons">
+      <a href="content.html" class="btn">Begin the Story</a>
+      <a href="abt.html" class="btn">Meet the Author</a>
+    </div>
+  </div>
+</body>
+</html>

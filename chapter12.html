@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 12 – When Closure Becomes a Cycle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #d5d0d7, #e7e3e8);
+      color: #3a2f33;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: auto;
+      padding: 60px 25px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: #8a5c71;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 6px rgba(106, 57, 88, 0.1);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+      animation-delay: var(--delay, 0.2s);
+    }
+
+    p:nth-of-type(1) { --delay: 0.3s; }
+    p:nth-of-type(2) { --delay: 0.6s; }
+    p:nth-of-type(3) { --delay: 0.9s; }
+    p:nth-of-type(4) { --delay: 1.2s; }
+    p:nth-of-type(5) { --delay: 1.5s; }
+    p:nth-of-type(6) { --delay: 1.8s; }
+    p:nth-of-type(7) { --delay: 2.1s; }
+    p:nth-of-type(8) { --delay: 2.4s; }
+    p:nth-of-type(9) { --delay: 2.7s; }
+    p:nth-of-type(10) { --delay: 3s; }
+
+    .highlight {
+      background: #f0d6e0;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #5c3a4e;
+      font-weight: 600;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #6e4f5c;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .footer-note {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .nav-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 24px;
+      background: #c3a6b1;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .nav-buttons a:hover {
+      background: #a37f91;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 26px; }
+      p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter 12: When Closure Becomes a Cycle</h1>
+
+    <p>One call. One voice trembling through tears.</p>
+    <p>Aavni dialed his number, her breath shaky, frustration wrapped around every word.</p>
+    <p>“<span class="highlight">Why haven't you changed, Darshan?</span> Why does it always feel like I care too much and you care too little?”</p>
+    <p>He stayed quiet for a moment, then sighed. “Aavni... you always think the worst of me. It’s not like that. I do care.”</p>
+    <p>But his words felt too polished, too practiced.</p>
+    <p>She could feel herself breaking all over again. Not from what he said, but from how familiar this was. The same pattern. The same excuses. And somehow, the same pull.</p>
+    <p>“You only come back when you feel like it,” she whispered, voice cracking. “And I always let you.”</p>
+    <p>He sighed again, a sound that made her chest tighten. “<span class="highlight">Don’t cry, sunshine</span>. You're too strong for that. Maybe I messed up... but can we not fight today? Just talk, like we used to?”</p>
+    <p>She hesitated. Logic told her to hang up. Her heart said otherwise.</p>
+    <p>Teja and Tani had warned her, again and again. They’d seen her tears, her silence, her irritability. They saw what she tried to hide behind fake smiles and half-hearted jokes.</p>
+    <p>But in that moment, all she wanted was to feel something familiar.</p>
+    <p>“Fine,” she said. “But this doesn’t change anything.”</p>
+    <p>“Of course not,” he replied. But she could hear the smirk in his voice.</p>
+    <p>Aavni closed her eyes. She knew better.</p>
+    <p>But sometimes, <span class="highlight">knowing better doesn’t mean doing better</span>.</p>
+
+    <p class="quote">“She wasn’t weak for giving chances. <br>
+    She was strong for hoping he’d finally be the version of himself she fell for.”</p>
+
+    <div class="footer-note">💌 Chapter 13 continues soon…</div>
+
+    <div class="nav-buttons">
+      <a href="chapter11.html">← Previous</a>
+      <a href="chapter13.html">Next →</a>
+    </div>
+  </div>
+</body>
+</html>
